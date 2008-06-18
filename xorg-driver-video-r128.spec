@@ -1,5 +1,5 @@
-Summary:	X.org video drivers for ATI adapters
-Summary(pl.UTF-8):	Sterowniki obrazu X.org do kart graficznych ATI
+Summary:	X.org video drivers for ATI Rage128 adapters
+Summary(pl.UTF-8):	Sterowniki obrazu X.org do kart graficznych ATI Rage128
 Name:		xorg-driver-video-r128
 Version:	6.8.0
 Release:	1
@@ -26,14 +26,14 @@ Obsoletes:	XFree86-driver-r128 < 1:7.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X.org video driver for ATI r128 adapter: supports all ATI Rage 128
+X.org video driver for ATI r128 adapters; supports all ATI Rage 128
 based video cards including the Rage Fury AGP 32MB, the XPERT 128 AGP
-16MB and the XPERT 99 AGP 8MB,
+16MB and the XPERT 99 AGP 8MB.
 
 %description -l pl.UTF-8
-Sterownik obrazu X.org do kart graficznych ATI r128: obsługujący
+Sterownik obrazu X.org do kart graficznych ATI r128; obsługuje
 wszystkie karty graficzne oparte na układzie ATI Rage 128, włącznie z
-Rage Fury AGP 32MB, XPERT 128 AGP 16MB i XPERT 99 AGP 8MB,
+Rage Fury AGP 32MB, XPERT 128 AGP 16MB i XPERT 99 AGP 8MB.
 
 %prep
 %setup -q -n xf86-video-r128-%{version}
