@@ -10,20 +10,27 @@ Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-r128-
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libdrm-devel >= 2.0
+BuildRequires:	libdrm-devel >= 2.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
+BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-glproto-devel
+BuildRequires:	xorg-proto-randrproto-devel
+BuildRequires:	xorg-proto-renderproto-devel
+BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xf86driproto-devel
+BuildRequires:	xorg-proto-xf86miscproto-devel
+BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xineramaproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
-BuildRequires:	xorg-xserver-server-devel >= 1.1.0
-%requires_xorg_xserver_videodrv
-Requires:	xorg-xserver-libdri >= 1.1.0
-Requires:	xorg-xserver-libglx >= 1.1.0
-Requires:	xorg-xserver-server >= 1.1.0
+BuildRequires:	xorg-util-util-macros >= 1.2
+BuildRequires:	xorg-xserver-server-devel >= 1.2
+%{?requires_xorg_xserver_videodrv}
+Requires:	libdrm >= 2.2
+Requires:	xorg-xserver-libdri >= 1.2
+Requires:	xorg-xserver-libglx >= 1.2
+Requires:	xorg-xserver-server >= 1.2
 Obsoletes:	X11-driver-r128 < 1:7.0.0
 Obsoletes:	XFree86-Rage128
 Obsoletes:	XFree86-driver-r128 < 1:7.0.0
@@ -48,8 +55,7 @@ Rage Fury AGP 32MB, XPERT 128 AGP 16MB i XPERT 99 AGP 8MB.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure \
-	--disable-static
+%configure
 
 %{__make}
 
@@ -66,6 +72,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING
+%doc COPYING ChangeLog README README.r128
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/r128_drv.so
 %{_mandir}/man4/r128.4*
