@@ -1,12 +1,12 @@
 Summary:	X.org video drivers for ATI Rage128 adapters
 Summary(pl.UTF-8):	Sterowniki obrazu X.org do kart graficznych ATI Rage128
 Name:		xorg-driver-video-r128
-Version:	6.9.2
-Release:	5
+Version:	6.10.0
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-r128-%{version}.tar.bz2
-# Source0-md5:	2e906d856a1c477bde000254b142445c
+# Source0-md5:	e24c8e50e545adcbe12edb031dab4948
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -24,13 +24,14 @@ BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-proto-xf86miscproto-devel
 BuildRequires:	xorg-proto-xineramaproto-devel
+BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-BuildRequires:	xorg-xserver-server-devel >= 1.2
+BuildRequires:	xorg-xserver-server-devel >= 1.3
 %{?requires_xorg_xserver_videodrv}
 Requires:	libdrm >= 2.2
-Requires:	xorg-xserver-libdri >= 1.2
-Requires:	xorg-xserver-libglx >= 1.2
-Requires:	xorg-xserver-server >= 1.2
+Requires:	xorg-xserver-libdri >= 1.3
+Requires:	xorg-xserver-libglx >= 1.3
+Requires:	xorg-xserver-server >= 1.3
 Provides:	xorg-driver-video
 Obsoletes:	X11-driver-r128 < 1:7.0.0
 Obsoletes:	XFree86-Rage128
