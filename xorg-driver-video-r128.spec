@@ -1,12 +1,12 @@
 Summary:	X.org video drivers for ATI Rage128 adapters
 Summary(pl.UTF-8):	Sterowniki obrazu X.org do kart graficznych ATI Rage128
 Name:		xorg-driver-video-r128
-Version:	6.10.2
-Release:	3
+Version:	6.11.0
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-r128-%{version}.tar.bz2
-# Source0-md5:	905758eb0711bf7151c4f6c435757426
+# Source0-md5:	3c411bab7a303d10ab8fc66a28c3d009
 Patch0:		types.patch
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
@@ -17,14 +17,12 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
 BuildRequires:	xorg-proto-fontsproto-devel
-BuildRequires:	xorg-proto-glproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-proto-xf86miscproto-devel
-BuildRequires:	xorg-proto-xineramaproto-devel
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.3
