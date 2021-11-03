@@ -1,14 +1,15 @@
---- xf86-video-r128-6.10.2/src/atipcirename.h.orig	2013-02-07 16:53:52.000000000 +0900
-+++ xf86-video-r128-6.10.2/src/atipcirename.h	2018-05-23 21:49:20.300159461 +0900
-@@ -35,6 +35,7 @@
- };
+diff -urNp -x '*.orig' xf86-video-r128-6.12.0.org/src/atipcirename.h xf86-video-r128-6.12.0/src/atipcirename.h
+--- xf86-video-r128-6.12.0.org/src/atipcirename.h	2018-10-23 06:10:56.000000000 +0200
++++ xf86-video-r128-6.12.0/src/atipcirename.h	2021-11-04 00:00:29.275887352 +0100
+@@ -36,6 +36,7 @@ enum region_type {
  
+ #include <stdint.h>
  #include "xf86Module.h"
 +#include <sys/types.h>
  
  #if GET_ABI_MAJOR(ABI_VIDEODRV_VERSION) >= 12
  
-@@ -49,10 +50,10 @@
+@@ -50,10 +51,10 @@ enum region_type {
  #endif
  #define PCI_DOMBUS_MASK (((PCI_DOM_MASK) << 8) | 0x0ffu)
  
